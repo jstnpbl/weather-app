@@ -14,9 +14,10 @@ A modern, responsive Progressive Web App (PWA) that provides real-time weather a
 - 📱 **PWA:** Installable, offline support, and mobile-friendly.
 - ♿ **Accessibility:** Keyboard navigation and ARIA labels.
 
-## Demo
+## Screenshot
 
-> _Add your live demo link here if deployed (e.g., GitHub Pages, Vercel, Netlify)._
+![image](https://github.com/user-attachments/assets/419ae6e2-94f6-4cb3-b338-de6ff82c146c)
+
 
 ## Getting Started
 

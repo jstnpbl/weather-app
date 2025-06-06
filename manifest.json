@@ -1,0 +1,29 @@
+{
+  "name": "Weather App",
+  "short_name": "Weather",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#74b9ff",
+  "theme_color": "#0078d7",
+  "description": "Get real-time weather and 5-day forecasts for any city, anywhere.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "meta": {
+    "description": "Get real-time weather and 5-day forecasts for any city, anywhere.",
+    "og:title": "Weather App",
+    "og:description": "Get real-time weather and 5-day forecasts for any city, anywhere.",
+    "og:image": "icons/icon-192.png",
+    "og:type": "website",
+    "twitter:card": "summary"
+  }
+}

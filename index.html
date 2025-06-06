@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/weather-icons@2.0.12/css/weather-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="icons/icon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0078d7">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <p class="subtitle">Get real-time weather and 5-day forecasts for any city, anywhere.</p>
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" aria-label="City name" />
+      <button id="searchBtn" aria-label="Search for city">Search</button>
+    </div>
+    <button id="geoBtn" class="geo-btn" type="button" aria-label="Use my location">Use My Location</button>
+    <div class="error" id="error"></div>
+    <div class="current-weather" id="currentWeather">
+      <h2 id="cityName">
+        <span id="cityText"></span>
+        <button id="favBtn" title="Add to favorites" class="fav-btn">☆</button>
+      </h2>
+      <div class="weather-details">
+        <span id="weatherIcon"></span>
+        <div>
+          <p id="temperature"></p>
+          <p id="description"></p>
+        </div>
+      </div>
+      <div class="extra-details">
+        <p id="humidity"></p>
+        <p id="wind"></p>
+      </div>
+    </div>
+    <div class="hourly" id="hourly">
+      <h3>Next 24 Hours</h3>
+      <div class="hourly-container" id="hourlyContainer"></div>
+    </div>
+    <div class="forecast" id="forecast">
+      <h3>5-Day Forecast</h3>
+      <div class="forecast-container" id="forecastContainer"></div>
+    </div>
+    <div class="search-coords">
+      <input type="number" id="latInput" placeholder="Latitude" step="any" />
+      <input type="number" id="lonInput" placeholder="Longitude" step="any" />
+      <button id="coordsBtn" type="button">Go</button>
+    </div>
+    <div class="units-toggle">
+      <label>
+        <input type="radio" name="unit" value="metric" checked>
+        °C, m/s
+      </label>
+      <label>
+        <input type="radio" name="unit" value="imperial">
+        °F, mph
+      </label>
+    </div>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark or light mode">🌙</button>
+    <div class="chart-section">
+      <canvas id="tempChart" height="120"></canvas>
+    </div>
+    <div class="weather-gauges">
+      <div class="gauge">
+        <label>Humidity</label>
+        <div class="gauge-bar"><div id="humidityBar" class="gauge-fill"></div></div>
+        <span id="humidityValue"></span>
+      </div>
+      <div class="gauge">
+        <label>Wind</label>
+        <div class="gauge-bar"><div id="windBar" class="gauge-fill"></div></div>
+        <span id="windValue"></span>
+      </div>
+      <div class="gauge">
+        <label>Pressure</label>
+        <div class="gauge-bar"><div id="pressureBar" class="gauge-fill"></div></div>
+        <span id="pressureValue"></span>
+      </div>
+    </div>
+    <div class="weather-extras">
+      <div class="extra-item">
+        <span class="wi wi-day-sunny"></span>
+        <span id="uvIndex"></span>
+      </div>
+      <div class="extra-item">
+        <span class="wi wi-fog"></span>
+        <span id="visibility"></span>
+      </div>
+      <div class="extra-item">
+        <span class="wi wi-sunrise"></span>
+        <span id="sunrise"></span>
+        <span class="wi wi-sunset" style="margin-left:1em"></span>
+        <span id="sunset"></span>
+      </div>
+    </div>
+    <select id="langSelect" class="lang-select" aria-label="Select language">
+      <option value="en" selected>English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+      <!-- Add more as needed -->
+    </select>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
